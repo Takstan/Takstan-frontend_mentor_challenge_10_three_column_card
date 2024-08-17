@@ -1,0 +1,122 @@
+/*
+font-family: "Big Shoulders Display", sans-serif;
+font-family: "Lexend Deca", system-ui;
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 144rem;
+  font-size: 1.6rem;
+  font-family: "Lexend Deca", system-ui;
+  font-weight: 400;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Makes the body fill the viewport height */
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.col-1,
+.col-2,
+.col-3 {
+  padding: 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+}
+.col-1__heading-primary,
+.col-2__heading-primary,
+.col-3__heading-primary {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+.col-1__content,
+.col-2__content,
+.col-3__content {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 6rem;
+}
+
+.col-1 {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.col-2 {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.col-3 {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.btn {
+  border: 3px solid transparent;
+  border-radius: 25px;
+  padding: 1.4rem 3.2rem;
+  font-size: 1.6rem;
+  color: hsl(31, 77%, 52%);
+  display: inline-block;
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: hsla(0, 0%, 100%, 0.75);
+  border: 3px solid hsla(0, 0%, 100%, 0.75);
+  background-color: transparent;
+}
+
+.btn-2 {
+  color: hsl(184, 100%, 22%);
+}
+
+.btn-3 {
+  color: hsl(179, 100%, 13%);
+}
+
+@media (max-width: 375px) {
+  body {
+    width: 37.5rem;
+    height: auto;
+  }
+  .container {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+  .col-1 {
+    border-radius: 0;
+  }
+  .col-1,
+  .col-2 {
+    flex-direction: column;
+  }
+  .col-1__content,
+  .col-2__content {
+    margin-bottom: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
